@@ -30,9 +30,14 @@ L1 E2 - 0 - OLAP Cubes - Solution.ipynb
 
 L3 Exercise 2 - IaC.ipynb
 
-Hay que crear un rol con los permisos de admin y poner las claves que te descargas en el archivo conf del workspace
+Hay que crear un usuario con los permisos de admin y poner las claves que te descargas en el archivo conf del workspace
 de udacity.
-
+- Creamos clientes para IAM, EC2, S3 y Redshift 
+- Creamos un role IAM que permita a Redshift acceder al depósito S3 (solo lectura)
+- Creamos el cluster de Redshift.
+- Abrir un puerto TCP entrante para acceder al endpoint del clúster
+- Comprobamos que nos podemos conectar al cluster
+- Eliminar el cluster y el role asociado a redshift
 
 https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/redshift/client/create_cluster.html#
 
@@ -47,3 +52,9 @@ L3 Exercise 3 - Parallel.ipynb
 
 Hay que tener el cluster creado del ejercicio anterior y comprobar que el archivo conf está como en el ejercicio 
 anterior con las claves y secretos del rol administrador creado anteriormente.
+
+- Conectarnos al cluster de Redshift
+- Creamos las tablas
+- Cargar datos particionados en el clúster
+- Crear tablas para los datos no particionados
+- Cargar datos no particionados en el clúster
